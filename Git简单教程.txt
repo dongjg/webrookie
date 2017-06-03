@@ -1,0 +1,39 @@
+一、安装Git
+1.下载安装Git。
+2.安装完成后，右击桌面出现一个菜单，单击“Git Bash Here”就会弹出一个类似命令行的窗口，说明Git安装成功。
+3.在命令行中输入：
+	$ git config --global user.name "dongjg"
+	$ git config --global user.email "dongjg@foxmail.com"
+二、创建版本库
+1.首先选择核实的位置，创建一个空目录：
+	$ cd E:			<!--进入某个目录-->
+	$ mkdir web cookie 	<!--创建web cookie空目录-->
+	$ cd web cookie		
+	$ pwd			<!--显示当前目录-->
+2.把这个空目录变成Git可管理的仓库：
+	$ git init
+  第二种方法直接鼠标点击进入这个目录，右击“Git Bash Here”，则这个目录自动变成Git可管理的仓库
+3.在web cookie目录下编写一个 Git简单教程.txt。
+4.把文件添加到仓库：
+	$ git add Git简单教程.txt
+5.把文件提交到仓库
+	$ git commit -m "Git简单使用教程"	<!-- -m后面输入的是本次提交的说明-->
+三、添加远程库
+1.第一次使用Git的push或clone命令连接GitHub时，会出现警告：
+	The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
+	RSA key fingerprint is xx.xx.xx.xx.xx.
+	Are you sure you want to continue connecting (yes/no)?
+  输入yes回车即可。第一次连接GitHub需要一个来自GitHub服务器的SSH Keys。把keys添加到本机信任列表里就ok了。
+2.创建SSH Key。
+	$ ssh-keygen -t rsa -C "dongjg@foxmail.com"
+3.登陆GitHub，打开“Setting”,“SSH and GPG keys”页面：
+	点击“New SSH key”,填写任意title，在key文本框里粘贴id_rsa.pub文件内容。
+4.登陆GitHub，在右上角找到“Create repository”，创建一个新的库，在Repository name填入web rookie，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库。
+5.根据GitHub的提示，在本地web rookie仓库下运行命令：
+	$ git remote add origin git@github.com:dongjg/web rookie.git
+6.把本地库的所有内容推送到远程库上：
+	$ git push -u origin master
+	<!--git push 实际上是把当前分支master推送到远程-->
+	<!--由于远程库是空的，我们第一次推送master分支时，加上了-u参数-->
+  以后推送或拉取时可以简化命令：
+	$ git push origin master
