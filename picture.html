@@ -1,4 +1,4 @@
-<!DOCTPYE html>
+<!DOCTYPE>
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,9 +7,15 @@
     <body>
         <p>
             <a href="https://github.com/">图片</a></p>
-        <img src="E:/code/qiaoba.gif" alt="乔巴" style="float:left" width="320" height="240">
+        <img src="E:/code/qiaoba.gif" alt="乔巴" style="float:left" width="320" height="240" usemap="#E:/code/qiaoba.gif">
     <!--img是空标签，它只包含属性。src即source，它的值是图像的URL（存储图像的位置）
         alt定义预备的可替换的文本
         width\height设置图像宽度、高度-->
+        <map name="E:/code/qiaoba.gif">
+        <area shape="rect" coords="0,0,80,175" href="E:/code/godofswond.gif" alt="GodofSwond">
+        </map>
+        <!--<area>标签定义图像映射内部的区域，其始终嵌套在<map>标签内部
+            shape="rect"表示的形状是矩形,shape="poly"表示的形状是多边形
+            coords=" "后跟的是坐标，坐标由shape的属性决定-->
     </body>
 </html>
