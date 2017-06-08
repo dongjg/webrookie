@@ -1,0 +1,44 @@
+!<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>表格代码</title>
+    </head>
+    <body>
+        <h3>一行一列：</h3>
+        <table border="2">         <!--table定义表格-->
+        <caption>地下城与勇士</caption>       <!--定义表格的标题-->
+            <tr>
+               <th>游戏</th>
+               <th colspan="2">职业</th>  <!--colspan属性规定表头单元格可横跨的列数
+                                              rowspan属性规定表头单元格可横跨的行数
+                                              比如：<th rowspan="2">-->
+            </tr>
+            <tr>        <!--定义表格的行-->
+                <td>地下城</td> <td>勇士</td> <td>赛利亚</td>     <!--定义表格数据，包含文本、图片、列表、段落、表单、水平线、表格等等-->
+                <td>剑圣</td> <td>剑神</td> <td>GSD</td>
+            </tr>
+        </table>
+        <h3>一行一列</h3>
+        <table broder="1">     <!--border 属性规定围绕表格的边框的宽度,broder="0"显示没有边框-->
+            <tr>
+                <td>地下城</td>
+            </tr>
+        </table>
+        <h3>两行两列</h3>
+        <table broder="2"> 
+            <tr>
+                <th>1</th>      <!--定义表格的表头-->
+                <th>2</th>
+            </tr>
+            <tr>
+                <td>地下城 勇士</td>
+            </tr>
+            <tr>
+                <td>剑圣 剑神</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--CSS border 属性允许你规定元素边框的样式、宽度和颜色-->
