@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>第一个javascript程序</title>
+    </head>
+    <body>
+        <p id="demo">
+            javascript可以触发事件，就像按钮点击；还可以改变html元素的样式。
+            <script>
+                function A()
+                {
+                    document.getElementById("demo").innerHTML="其实并不知道是什么意思！"
+                }
+                function B()
+                {
+                    x=document.getElementById("demo")
+                    x.style.color="red";
+                }
+            </script>
+            <button type="button" onclick="A()">触发事件</button>
+            <button type="button" onclick="B()">改变样式</button>
+    </body>
+</html>
